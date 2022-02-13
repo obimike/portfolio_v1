@@ -29,6 +29,7 @@ function Splash() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="*" element={<Home />} />
+        <Route path="/#*" element={<Home />} />
       </Routes>
     );
   }
