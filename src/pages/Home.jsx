@@ -1,10 +1,9 @@
-import React from "react";
 import {
   Header,
   Hero,
   About,
   Skills,
-  Portfolio,
+  Portfolio as Work,
   Contact,
   Footer,
 } from "../components";
@@ -17,7 +16,7 @@ function Home() {
         <Hero />
         <About />
         <Skills />
-        <Portfolio />
+        <Work />
         <Contact />
         <Footer />
       </div>

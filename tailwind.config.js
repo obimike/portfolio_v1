@@ -23,6 +23,7 @@ module.exports = {
         languages: "#204B4E",
         dark: "#009eeb",
         stroke: "#277B77",
+        gray: "#E5E5E5",
         lang_bg: "rgba(62, 78, 85, 0.5)",
       },
     },

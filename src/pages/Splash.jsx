@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 
+import Portfolio from "./Portfolio";
 import Home from "./Home";
 
 function Splash() {
@@ -22,7 +24,13 @@ function Splash() {
       </div>
     );
   } else {
-    return <Home />;
+    return (
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    );
   }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 import Internship from "../../assets/img/internship.png";
 import Taak from "../../assets/img/taak.png";
@@ -54,7 +54,7 @@ function Portfolio() {
       {/* link to more projects */}
       <div className="flex justify-end my-12">
         <p className=" text-accent underline">
-          <a href="#1">view all projects</a>
+          <Link to="/portfolio">view all projects</Link>
         </p>
       </div>
     </div>
@@ -138,73 +138,5 @@ const PortfolioCard = (details) => {
     </div>
   );
 };
-
-// const Card = (details) => (
-//   <div className="pt-16 w-full work_title flex justify-between gap-4 items-center">
-//     <div className="tablet:w-1/2 laptop:w-3/5">
-//       <img className="" src={details.details.img} alt="portfolio_image" />
-//     </div>
-
-//     <div className="tablet:w-1/2 laptop:w-2/5 flex-col space-y-4">
-//       <p
-//         className={` ${
-//           details.details.number === 1
-//             ? "tablet:text-left"
-//             : "tablet:text-right"
-//         }`}
-//       >
-//         {details.details.name}
-//       </p>
-//       <p
-//         className={`text-sm ${
-//           details.details.number === 1
-//             ? "tablet:text-left"
-//             : "tablet:text-right"
-//         }`}
-//       >
-//         {details.details.desc}
-//       </p>
-//       <div
-//         className={`flex ${
-//           details.details.number === 2
-//             ? "tablet:justify-end"
-//             : "tablet:justify-start"
-//         }`}
-//       >
-//         <span className="lang_used">{details.details.lang[0]}</span>
-//         <span className="lang_used mx-3">{details.details.lang[1]}</span>
-//         <span className="lang_used">{details.details.lang[2]}</span>
-//       </div>
-
-//       <div
-//         className={`flex  ${
-//           details.details.number === 2
-//             ? "tablet:justify-end"
-//             : "tablet:justify-start"
-//         }`}
-//       >
-//         {console.log(
-//           details.details.number === 1 ? "justify-end" : "justify-end"
-//         )}
-
-//         <a href="#q">
-//           <img
-//             className="transition500 hover:scale-150 bg-transparent"
-//             src={GitHub}
-//             alt="GitHub"
-//           />
-//         </a>
-
-//         <a href="#q" className=" ml-6">
-//           <img
-//             className="transition500 hover:scale-150"
-//             src={ExternalLink}
-//             alt="View Site"
-//           />
-//         </a>
-//       </div>
-//     </div>
-//   </div>
-// );
 
 export default Portfolio;

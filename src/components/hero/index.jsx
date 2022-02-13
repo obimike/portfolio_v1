@@ -18,7 +18,9 @@ function Hero() {
           A passionate web and software developer, who design and code with
           love.
         </p>
-        <button className="btn-btn">Let's Chat</button>
+        <a href="#connect">
+          <button className="btn-btn">Let's Chat</button>
+        </a>
       </div>
       <div className="hidden tablet:flex slideIn">
         <img src={Bubbles} alt="bubbles" />

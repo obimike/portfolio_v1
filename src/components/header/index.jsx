@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function Header() {
@@ -34,9 +35,9 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="#connect" className="hover:text-primary">
+            <Link to="#connect" className="hover:text-primary">
               Connect
-            </a>
+            </Link>
           </li>
         </ul>
         <label

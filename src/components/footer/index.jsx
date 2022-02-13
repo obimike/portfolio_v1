@@ -2,7 +2,7 @@ import { Linkedin, Twitter, Codepen, GitHub } from "react-feather";
 
 function Footer() {
   return (
-    <div className="grid grid-flow-col grid-cols-1 grid-rows-3 justify-items-center mt-16 mb-2">
+    <div className="grid grid-flow-col grid-cols-1 grid-rows-3 justify-items-center mt-16">
       <div className="flex gap-16 text-danger">
         <Linkedin className="socialIcons" />
         <GitHub className="socialIcons" />

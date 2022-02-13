@@ -88,3 +88,11 @@ body {
 .socialIcons {
   @apply w-6 h-6 cursor-pointer hover:scale-150 transition duration-500 ease-in-out;
 }
+
+.filterBtn {
+  @apply px-2 py-1 rounded border border-brand-stroke border-solid hover:bg-brand cursor-pointer text-sm tablet:text-lg;
+}
+
+.portfolioCard {
+  @apply smallPhone:w-full laptop:w-[49%] h-96 rounded border border-brand-stroke border-solid;
+}
