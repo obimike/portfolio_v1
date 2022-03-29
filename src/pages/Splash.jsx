@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
 
-import Portfolio from "./Portfolio";
 import Home from "./Home";
 
 function Splash() {
@@ -11,7 +9,7 @@ function Splash() {
     setTimeout(() => {
       setLoading(false);
     }, 4500);
-  }, []);
+  }, [loading]);
 
   if (loading) {
     return (
@@ -24,14 +22,7 @@ function Splash() {
       </div>
     );
   } else {
-    return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="*" element={<Home />} />
-        <Route path="/#*" element={<Home />} />
-      </Routes>
-    );
+    return <Home />;
   }
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./style.css";
 
 function Header() {
@@ -13,31 +13,31 @@ function Header() {
       >
         <div>
           <p className="phone:text-3xl tablet:text-4xl laptop:text-4xl smallPhone:text-2xl">
-            <a href="#logo">
+            <a href="/portfolio#home">
               Sa<span className="text-primary">m</span>iie
             </a>
           </p>
         </div>
         <ul className="hidden tablet:flex gap-6 ">
           <li>
-            <a href="#about" className="hover:text-primary">
+            <a href="/portfolio#about" className="hover:text-primary">
               About
             </a>
           </li>
           <li>
-            <a href="#skills" className="hover:text-primary">
+            <a href="/portfolio#skills" className="hover:text-primary">
               Skills
             </a>
           </li>
           <li>
-            <a href="#works" className="hover:text-primary">
+            <a href="/portfolio#works" className="hover:text-primary">
               Works
             </a>
           </li>
           <li>
-            <Link to="#connect" className="hover:text-primary">
+            <a href="/portfolio#connect" className="hover:text-primary">
               Connect
-            </Link>
+            </a>
           </li>
         </ul>
         <label
@@ -85,6 +85,8 @@ function Header() {
           )}
         </label>
       </div>
+
+      {/* Drawer for smaller devices */}
 
       <div className="drawer drawer-end">
         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />

@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <Header />
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-[1024px] mx-auto">
         <Hero />
         <About />
         <Skills />

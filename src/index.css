@@ -93,6 +93,14 @@ body {
   @apply px-2 py-1 rounded border border-brand-stroke border-solid hover:bg-brand cursor-pointer text-sm tablet:text-lg;
 }
 
+.selectedBtn {
+  @apply px-2 py-1 rounded border border-brand-stroke border-solid bg-brand cursor-pointer text-sm tablet:text-lg;
+}
+
 .portfolioCard {
-  @apply smallPhone:w-full laptop:w-[49%] h-96 rounded border border-brand-stroke border-solid;
+  @apply smallPhone:w-full laptop:w-[49%] h-auto;
+}
+
+.worksImage {
+  @apply smallPhone:w-full laptop:w-[95%] h-[253.56px] rounded-lg justify-self-center;
 }

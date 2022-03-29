@@ -4,7 +4,7 @@ import Bubbles from "../../assets/img/Bubbles.svg";
 function Hero() {
   return (
     <div
-      id="logo"
+      id="home"
       className="text-center flex align-middle items-center tablet:justify-between h-screen relative tablet:px-16 smallPhone:px-4  smallPhone:w-full"
     >
       <div className="tablet:text-left slideUp tablet:max-w-[568px] smallPhone:m-auto">

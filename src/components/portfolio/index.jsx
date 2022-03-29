@@ -54,7 +54,7 @@ function Portfolio() {
       {/* link to more projects */}
       <div className="flex justify-end my-12">
         <p className=" text-accent underline">
-          <Link to="/portfolio">view all projects</Link>
+          <a href="/works">view all projects</a>
         </p>
       </div>
     </div>

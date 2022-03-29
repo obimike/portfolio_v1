@@ -1,6 +1,6 @@
 import { Header, Work, Footer } from "../components";
 
-function Portfolio() {
+function Works() {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Works;

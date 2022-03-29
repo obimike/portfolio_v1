@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 95%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #2daa9f;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 769px) {
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #2daa9f;
+    border-radius: 0.5rem;
+  }
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: transparent;
+}
+
+.project__name {
+  background: transparent;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.project__desc {
+  background: transparent;
+  font-size: 14px;
+  width: 320px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: transparent;
+  justify-content: center;
+}
+
+.project__lang {
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.project__git {
+  background: transparent;
+  color: #1c3139;
+}
