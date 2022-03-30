@@ -1,37 +1,7 @@
-import { Link } from "react-router-dom";
-
-import Internship from "../../assets/img/internship.png";
-import Taak from "../../assets/img/taak.png";
-import NewsCluster from "../../assets/img/newsCluster.png";
 import GitHub from "../../assets/img/github.svg";
 import ExternalLink from "../../assets/img/external-link.svg";
 
-const internship = {
-  name: "Internship",
-  img: Internship,
-  desc: "Use Internship's real-time community collaboration to reinforce what you've learned and get you ready for that big moment.",
-  lang: ["React", "Chakra-UI", "Firebase"],
-  links: ["http://github.com", "/link"],
-  number: 1,
-};
-
-const taak = {
-  name: "Taak",
-  img: Taak,
-  desc: "This platform to manage and track all projects of different types by breaking it down to smaller tasks that are assignable to any member of your  team. ",
-  lang: ["React", "Material-UI", "Firebase"],
-  links: ["http://github.com", "/link"],
-  number: 2,
-};
-
-const newsCluster = {
-  name: "NewsCluster",
-  img: NewsCluster,
-  desc: "NewsCluster is an aggregated news app for almost all category of news. Users can share, bookmark or upvote a news articles. The news with the highest number of upvote becomes the News of the day. ",
-  lang: ["Android", "Php", "Firebase"],
-  links: ["http://github.com", "/link"],
-  number: 1,
-};
+import { workData } from "../../data/works";
 
 function Portfolio() {
   return (
@@ -44,12 +14,10 @@ function Portfolio() {
           My Works
         </p>
       </div>
-      <PortfolioCard details={internship} />
-      <PortfolioCard details={taak} />
-      <PortfolioCard details={newsCluster} />
 
-      {/* <Card details={internship} />
-      <Card details={newsCluster} /> */}
+      {workData.slice(0, 3).map((work) => (
+        <PortfolioCard details={work} />
+      ))}
 
       {/* link to more projects */}
       <div className="flex justify-end my-12">

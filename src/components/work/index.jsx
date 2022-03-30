@@ -67,14 +67,24 @@ const Work = () => {
                         })}
                       </div>
                       <div className="project__icons mt-4">
-                        <a href={work.links[0]} className="project__git">
+                        <a
+                          href={work.links[0]}
+                          className="project__git"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <img
                             className="transition50  0 hover:scale-125 project__git"
                             src={GitHub}
                             alt="GitHub"
                           />
                         </a>
-                        <a href={work.links[1]} className="project__git">
+                        <a
+                          href={work.links[1]}
+                          className="project__git"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <img
                             className="transition50 hover:scale-125 project__git"
                             src={ExternalLink}
@@ -105,7 +115,12 @@ const Work = () => {
                           })}
                         </div>
                         <div className="project__icons mt-4">
-                          <a href={work.links[0]} className="project__git">
+                          <a
+                            href={work.links[0]}
+                            className="project__git"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <img
                               className="transition50  0 hover:scale-125 project__git"
                               src={GitHub}
@@ -115,8 +130,8 @@ const Work = () => {
                           <a
                             href={work.links[1]}
                             className="project__git"
-                            // target="_blank"
-                            // rel=""
+                            target="_blank"
+                            rel="noreferrer"
                           >
                             <img
                               className="transition50 hover:scale-125 project__git"
