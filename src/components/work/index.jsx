@@ -49,6 +49,14 @@ const Work = () => {
         >
           Python
         </div>
+        <div
+          className={`filterBtn ${
+            filter_Language === "React Native" ? "selectedBtn" : ""
+          }`}
+          onClick={() => filter__project("React Native")}
+        >
+          React Native
+        </div>
       </div>
 
       <div className="flex flex-wrap laptop:justify-between gap-y-10 ">
@@ -57,13 +65,17 @@ const Work = () => {
               return (
                 <div className="portfolioCard container" key={work?.id}>
                   <img src={work.img} alt="" className="worksImage" />
-                  <div class="overlay">
+                  <div className="overlay">
                     <div className="text">
                       <p className="project__name">{work.name}</p>
                       <p className="project__desc">{work.desc}</p>
                       <div className="project__icons ">
-                        {work.lang.map((lang) => {
-                          return <span className="project__lang">{lang}</span>;
+                        {work.lang.map((lang, index) => {
+                          return (
+                            <span className="project__lang" key={index}>
+                              {lang}
+                            </span>
+                          );
                         })}
                       </div>
                       <div className="project__icons mt-4">
@@ -103,14 +115,16 @@ const Work = () => {
                 return (
                   <div className="portfolioCard container" key={work?.id}>
                     <img src={work.img} alt="" className="worksImage" />
-                    <div class="overlay">
+                    <div className="overlay">
                       <div className="text">
                         <p className="project__name">{work.name}</p>
                         <p className="project__desc">{work.desc}</p>
                         <div className="project__icons ">
-                          {work.lang.map((lang) => {
+                          {work.lang.map((lang, index) => {
                             return (
-                              <span className="project__lang">{lang}</span>
+                              <span className="project__lang" key={index}>
+                                {lang}
+                              </span>
                             );
                           })}
                         </div>

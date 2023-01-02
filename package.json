@@ -1,5 +1,5 @@
 {
-  "homepage": " https://obimike.github.io/portfolio_v1",
+  "homepage": "https://obimike.github.io/portfolio_v1",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "daisyui": "^1.16.6",
+    "nodemailer": "^6.8.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",

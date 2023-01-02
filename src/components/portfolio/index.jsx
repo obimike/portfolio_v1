@@ -15,8 +15,8 @@ function Portfolio() {
         </p>
       </div>
 
-      {workData.slice(0, 3).map((work) => (
-        <PortfolioCard details={work} />
+      {workData.slice(0, 3).map((work, index) => (
+        <PortfolioCard details={work} key={index} />
       ))}
 
       {/* link to more projects */}

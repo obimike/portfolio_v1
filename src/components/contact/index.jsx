@@ -1,4 +1,6 @@
 function Contact() {
+  const send = () => {};
+
   return (
     <div
       id="connect"
@@ -11,7 +13,7 @@ function Contact() {
       </div>
 
       <div className="mt-12 tablet:flex tablet:justify-between">
-        <div className=" smallPhone:w-screen tablet: w-[250px] tablet:w-5/12 tablet:align-middle">
+        <div className=" tablet:w-5/12 tablet:align-middle">
           <h1 className="smallPhone:text-center smallPhone:text-lg tablet:text-2xl tablet:text-left mb-2 ">
             Get in touch
           </h1>
@@ -63,6 +65,7 @@ function Contact() {
                 border-solid cursor-pointer"
                 type="button"
                 value="Send Message"
+                onClick={send}
               />
             </div>
           </form>

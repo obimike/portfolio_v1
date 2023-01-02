@@ -25,6 +25,7 @@ module.exports = {
         stroke: "#277B77",
         gray: "#E5E5E5",
         lang_bg: "rgba(62, 78, 85, 0.5)",
+        bodyColor: "#1c3139",
       },
     },
 

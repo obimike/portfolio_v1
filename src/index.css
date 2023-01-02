@@ -104,3 +104,7 @@ body {
 .worksImage {
   @apply smallPhone:w-full laptop:w-[95%] h-[253.56px] rounded-lg justify-self-center;
 }
+
+.menuIcon {
+  @apply w-4 h-4;
+}
