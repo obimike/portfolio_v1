@@ -9,25 +9,31 @@ function Contact() {
     e.preventDefault();
     setisLoading(true);
 
-    // emailjs
-    //   .sendForm(
-    //     "service_f6rq6up", // "YOUR_SERVICE_ID",
-    //     "template_9n60b35", // "YOUR_TEMPLATE_ID",
-    //     form.current,
-    //     "2c8sF122lijze5EvX" //  "YOUR_PUBLIC_KEY"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //  form.current.from_name.value = "";
-    //  form.current.from_email.value = "";
-    //  form.current.subject.value = "";
-    //  form.current.message.value = "";
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    // setTimeout(() => {
+    //   setisLoading(false);
+    // }, 4500);
+
+    emailjs
+      .sendForm(
+        "service_f6rq6up", // "YOUR_SERVICE_ID",
+        "template_9n60b35", // "YOUR_TEMPLATE_ID",
+        form.current,
+        "2c8sF122lijze5EvX" //  "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          form.current.from_name.value = "";
+          form.current.from_email.value = "";
+          form.current.subject.value = "";
+          form.current.message.value = "";
+          setisLoading(false);
+        },
+        (error) => {
+          console.log(error.text);
+          setisLoading(false);
+        }
+      );
   };
 
   return (
@@ -93,13 +99,19 @@ function Contact() {
               />
             </div>
             <div className="mt-4 flex justify-end">
-              <input
-                className={
-                  "bg-brand-stroke rounded-lg px-3 py-2 hover:bg-transparent border-2 border-brand-stroke border-solid cursor-pointer {isLoading ? 'btn loading': ''} "
-                }
+              <button
+                className={`btn bg-brand-stroke rounded-lg px-3 py-2 hover:bg-transparent hover:border-brand-stroke border-2 border-brand-stroke border-solid cursor-pointer ${
+                  isLoading ? "loading" : ""
+                } `}
+                type="submit"
+              >
+                Send Message
+              </button>
+              {/* <input
+                className={`bg-brand-stroke rounded-lg px-3 py-2 hover:bg-transparent border-2 border-brand-stroke border-solid cursor-pointer `}
                 type="submit"
                 value="Send Message"
-              />
+              /> */}
             </div>
           </form>
         </div>
