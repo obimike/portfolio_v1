@@ -1,5 +1,34 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 function Contact() {
-  const send = () => {};
+  const [isLoading, setisLoading] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setisLoading(true);
+
+    // emailjs
+    //   .sendForm(
+    //     "service_f6rq6up", // "YOUR_SERVICE_ID",
+    //     "template_9n60b35", // "YOUR_TEMPLATE_ID",
+    //     form.current,
+    //     "2c8sF122lijze5EvX" //  "YOUR_PUBLIC_KEY"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //  form.current.from_name.value = "";
+    //  form.current.from_email.value = "";
+    //  form.current.subject.value = "";
+    //  form.current.message.value = "";
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
+  };
 
   return (
     <div
@@ -27,14 +56,15 @@ function Contact() {
           </p>
         </div>
 
-        <div className=" tablet:w-6/12">
-          <form>
+        <div className="tablet:w-6/12">
+          <form ref={form} onSubmit={sendEmail}>
             <div className="tablet:flex">
               <div className="tablet:mr-2">
                 <input
                   className="inputContact smallPhone:mt-4 tablet:mt-0 smallPhone:min-w-full tablet:w-full"
                   type="text"
                   placeholder="Name"
+                  name="from_name"
                 />
               </div>
               <div className="tablet:ml-2">
@@ -43,6 +73,7 @@ function Contact() {
                   tablet:w-full"
                   type="email"
                   placeholder="Email"
+                  name="from_email"
                 />
               </div>
             </div>
@@ -51,21 +82,23 @@ function Contact() {
                 className="inputContact min-w-full"
                 type="text"
                 placeholder="Subject"
+                name="subject"
               />
             </div>
             <div>
               <textarea
                 className="inputContact min-w-full h-[227px]"
                 placeholder="Message"
+                name="message"
               />
             </div>
             <div className="mt-4 flex justify-end">
               <input
-                className="bg-brand-stroke rounded-lg px-3 py-2 hover:bg-transparent border-2 border-brand-stroke 
-                border-solid cursor-pointer"
-                type="button"
+                className={
+                  "bg-brand-stroke rounded-lg px-3 py-2 hover:bg-transparent border-2 border-brand-stroke border-solid cursor-pointer {isLoading ? 'btn loading': ''} "
+                }
+                type="submit"
                 value="Send Message"
-                onClick={send}
               />
             </div>
           </form>
